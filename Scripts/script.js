@@ -1,16 +1,11 @@
-var toBounce = false;
 var AudioPlayer = new audioPlayer(4);
 var baseURL = "http://media.leanometry.com/";
 
 function bounce() {
     $('.bouncerSpeaker').removeClass('swing');
     $('.bouncerSpeaker').removeClass('flip');
-    if (toBounce) {
-        $('.bouncerSpeaker').addClass('bounce');
-    } else {
-        $('.bouncerSpeaker').removeClass('bounce');
-    }
-    toBounce = !toBounce;
+    $('.bouncerSpeaker').toggleClass('bounce');
+    
 };
 
 function audioPlayer(songsCount) {
